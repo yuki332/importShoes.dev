@@ -172,4 +172,7 @@ GitHub.sublime-settings
 ### Vagrant ###
 .vagrant/
 
+## sketch file ##
+.sketch
+
 # End of https://www.gitignore.io/api/node,sass,macos,stylus,vagrant,laravel,composer,sublimetext
