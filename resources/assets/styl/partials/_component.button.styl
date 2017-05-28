@@ -1,0 +1,33 @@
+.btn
+	border none
+	background white
+	transition all .6s
+	&--sm
+		font-size font-s
+		padding padding-s
+	&--md
+		font-size font-m
+		padding padding-m
+		padding-left ( padding-m * 3 )
+		padding-right ( padding-m * 3 )
+	&--lg
+		font-size font-l
+		padding padding-l
+	&--special
+		background sky
+		color white
+		transition background .6s
+		&:hover
+			background sky-hover
+			transition background .6s
+	&--clear
+		background rgba(255,255,255,0)
+		border 1px solid white
+		color white
+		&:hover
+			border 1px pink-hover solid
+			background pink-hover
+			transition all .6s
+	a
+		text-decoration none
+		color inherit

@@ -788,7 +788,7 @@ window.Vue = __webpack_require__(37);
 Vue.component('example', __webpack_require__(34));
 
 var app = new Vue({
-  el: '#app'
+  el: '#popular'
 });
 
 /***/ }),
@@ -1640,10 +1640,8 @@ module.exports = function spread(callback) {
 
 /***/ }),
 /* 28 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
@@ -1655,17 +1653,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-    mounted: function mounted() {
-        console.log('Component mounted.');
-    }
-});
 
 /***/ }),
 /* 29 */
@@ -31749,18 +31736,17 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
   return _vm._m(0)
 },staticRenderFns: [function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
   return _c('div', {
-    staticClass: "container"
-  }, [_c('div', {
-    staticClass: "row"
-  }, [_c('div', {
-    staticClass: "col-md-8 col-md-offset-2"
-  }, [_c('div', {
-    staticClass: "panel panel-default"
-  }, [_c('div', {
-    staticClass: "panel-heading"
-  }, [_vm._v("Example Component")]), _vm._v(" "), _c('div', {
-    staticClass: "panel-body"
-  }, [_vm._v("\n                    I'm an example component!\n                ")])])])])])
+    staticClass: "card"
+  }, [_c('img', {
+    staticClass: "card__img",
+    attrs: {
+      "src": "/img/newbalance.png"
+    }
+  }), _vm._v(" "), _c('h3', [_vm._v("Shoes Name")]), _vm._v(" "), _c('p', [_vm._v("Price: $120.99")]), _vm._v(" "), _c('div', {
+    staticClass: "text--right"
+  }, [_c('button', {
+    staticClass: "btn card__btn"
+  }, [_vm._v("Order")])])])
 }]}
 module.exports.render._withStripped = true
 if (false) {
