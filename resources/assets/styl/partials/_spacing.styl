@@ -10,10 +10,32 @@
 	height 100vh
 
 // width
-.full-width
-	width 100vw
+.width
+	&--full
+		width 100vw
+	&--half
+		width 50vw
+	&--third
+		width 33vw
+	&--quarter
+		width 25vw
 
-.flex-center
-	align-items center
+// flex
+.flex
 	display flex
-	justify-content center
+	&--wrap
+		flex-wrap wrap
+	&--center
+		align-items center
+		justify-content center
+	&--spbtw
+		justify-content space-between
+	&--sparnd
+		justify-content space-around
+
+// text align
+.text
+	&--center
+		text-align center
+	&--right
+		text-align right
