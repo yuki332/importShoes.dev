@@ -10,7 +10,18 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+// guest
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('home');
+
+// sign in
+Route::post('/', 'AuthController@store');
+Route::get('/logout', 'AuthController@destroy');
+
+// user page
+Route::get('/mypage', 'OrderController@index');
+
+// admin page
+Route::get('/admin/login', 'ClientController@login');
+Route::post('/admin/login', 'ClientController@authenticate');

@@ -5,12 +5,15 @@
 
     <body>
 		<div id="wrapper">
-	        @include('layouts.nav')
+			<nav>
+				<h1><a href="/">importShoes.dev</a></h1>
+			</nav>
 	        
 	        @yield('content')
-
-	        @include('layouts.footer')
+	
 		</div>
+	
 		@include('layouts.script')
+    
     </body>
 </html>

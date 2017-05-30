@@ -14,9 +14,13 @@ window.Vue = require('vue');
  * the page. Then, you may begin adding components to this application
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
+ 
+Vue.component('modal', require('./components/modal.vue'));
+Vue.component('card', require('./components/cards.vue'));
 
-Vue.component('example', require('./components/Example.vue'));
-
-const app = new Vue({
-    el: '#popular'
+new Vue({
+    el: '#wrapper',
+    data: {
+    	showModal: false
+    }
 });

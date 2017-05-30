@@ -30,8 +30,10 @@
         How many hours to create this? To be honest, it took hours total!
         (Not including setting up the development environment)
     </div>
+    <div class="width--third">
+        <a href="/admin/login">admin</a>
+    </div>
 </footer>
 <div class="copyright">
     <small>&copy; Yuki Arai. All rights reserved. This site is only example site. NOT actually providing the service.</small>
 </div>
-@include('layouts.script')
