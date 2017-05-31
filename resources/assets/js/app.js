@@ -21,6 +21,7 @@ Vue.component('card', require('./components/cards.vue'));
 new Vue({
     el: '#wrapper',
     data: {
-    	showModal: false
+    	showResigter: false,
+    	showLogin: false
     }
 });

@@ -16,9 +16,9 @@ Route::get('/', function () {
 })->name('home');
 
 // sign in
-Route::post('/', 'AuthController@store');
+Route::post('/register', 'AuthController@store');
 Route::get('/logout', 'AuthController@destroy');
-
+Route::post('/login', 'AuthController@login');
 // user page
 Route::get('/mypage', 'OrderController@index');
 

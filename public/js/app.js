@@ -842,13 +842,14 @@ window.Vue = __webpack_require__(45);
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
-Vue.component('modal', __webpack_require__(50));
+Vue.component('modal', __webpack_require__(39));
 Vue.component('card', __webpack_require__(38));
 
 new Vue({
   el: '#wrapper',
   data: {
-    showModal: false
+    showResigter: false,
+    showLogin: false
   }
 });
 
@@ -1727,7 +1728,26 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 });
 
 /***/ }),
-/* 30 */,
+/* 30 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({});
+
+/***/ }),
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -4169,7 +4189,13 @@ if (typeof jQuery === 'undefined') {
 
 
 /***/ }),
-/* 33 */,
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(34)();
+exports.push([module.i, "\n.modal{\n\tposition: fixed;\n\tbackground: rgba(0, 0, 0, 0.5);\n\theight: 100%;\n\twidth: 100%;\n\ttop: 0;\n}\n.modal__container{\n\twidth: 50vw;\n\tmin-width: 500px;\n\tmargin-right: auto;\n\tmargin-left: auto;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\tmargin-top: 25vh;\n}\n.form__input{\n\twidth: 100%;\n\tbox-sizing: border-box;\n}\n.ishalf{\n\twidth: inherit;\n}\n.close{\n\tposition: absolute;\n\ttop: 1em;\n\tright:1em;\n}\n.close--btn{\n\tbackground: rgba(0, 0, 0, 0);\n\tborder: none;\n\tcolor: white;\n\tfont-size: 1em;\n}\n", ""]);
+
+/***/ }),
 /* 34 */
 /***/ (function(module, exports) {
 
@@ -31802,7 +31828,44 @@ module.exports = Component.exports
 
 
 /***/ }),
-/* 39 */,
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+/* styles */
+__webpack_require__(42)
+
+var Component = __webpack_require__(7)(
+  /* script */
+  __webpack_require__(30),
+  /* template */
+  __webpack_require__(41),
+  /* scopeId */
+  null,
+  /* cssModules */
+  null
+)
+Component.options.__file = "/Users/yukiarai/Code/importShoes/resources/assets/js/components/modal.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
+if (Component.options.functional) {console.error("[vue-loader] modal.vue: functional components are not supported with templates, they should use render functions.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-becc1c1c", Component.options)
+  } else {
+    hotAPI.reload("data-v-becc1c1c", Component.options)
+  }
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
 /* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -31827,8 +31890,60 @@ if (false) {
 }
 
 /***/ }),
-/* 41 */,
-/* 42 */,
+/* 41 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
+  return _c('div', {
+    staticClass: "modal"
+  }, [_c('div', {
+    staticClass: "close",
+    on: {
+      "click": function($event) {
+        _vm.$emit('close')
+      }
+    }
+  }, [_c('button', {
+    staticClass: "close--btn"
+  }, [_vm._v("X")])]), _vm._v(" "), _c('div', {
+    staticClass: "modal__container"
+  }, [_vm._t("default")], 2)])
+},staticRenderFns: []}
+module.exports.render._withStripped = true
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+     require("vue-hot-reload-api").rerender("data-v-becc1c1c", module.exports)
+  }
+}
+
+/***/ }),
+/* 42 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(33);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(43)("c5de9798", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-becc1c1c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modal.vue", function() {
+     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-becc1c1c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modal.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
 /* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -41815,127 +41930,6 @@ module.exports = function(module) {
 __webpack_require__(9);
 module.exports = __webpack_require__(10);
 
-
-/***/ }),
-/* 48 */,
-/* 49 */,
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-/* styles */
-__webpack_require__(54)
-
-var Component = __webpack_require__(7)(
-  /* script */
-  __webpack_require__(51),
-  /* template */
-  __webpack_require__(52),
-  /* scopeId */
-  null,
-  /* cssModules */
-  null
-)
-Component.options.__file = "/Users/yukiarai/Code/importShoes/resources/assets/js/components/modal.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {return key !== "default" && key !== "__esModule"})) {console.error("named exports are not supported in *.vue files.")}
-if (Component.options.functional) {console.error("[vue-loader] modal.vue: functional components are not supported with templates, they should use render functions.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-becc1c1c", Component.options)
-  } else {
-    hotAPI.reload("data-v-becc1c1c", Component.options)
-  }
-})()}
-
-module.exports = Component.exports
-
-
-/***/ }),
-/* 51 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/* harmony default export */ __webpack_exports__["default"] = ({});
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;
-  return _c('div', {
-    staticClass: "modal"
-  }, [_c('div', {
-    staticClass: "close",
-    on: {
-      "click": function($event) {
-        _vm.$emit('close')
-      }
-    }
-  }, [_c('button', {
-    staticClass: "close--btn"
-  }, [_vm._v("X")])]), _vm._v(" "), _c('div', {
-    staticClass: "modal__container"
-  }, [_vm._t("default")], 2)])
-},staticRenderFns: []}
-module.exports.render._withStripped = true
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-     require("vue-hot-reload-api").rerender("data-v-becc1c1c", module.exports)
-  }
-}
-
-/***/ }),
-/* 53 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(34)();
-exports.push([module.i, "\n.modal{\n\tposition: fixed;\n\tbackground: rgba(0, 0, 0, 0.5);\n\theight: 100%;\n\twidth: 100%;\n\ttop: 0;\n}\n.modal__container{\n\twidth: 50vw;\n\tmin-width: 500px;\n\tmargin-right: auto;\n\tmargin-left: auto;\n\tdisplay: -webkit-box;\n\tdisplay: -ms-flexbox;\n\tdisplay: flex;\n\t-webkit-box-align: center;\n\t    -ms-flex-align: center;\n\t        align-items: center;\n\t-webkit-box-pack: center;\n\t    -ms-flex-pack: center;\n\t        justify-content: center;\n\tmargin-top: 25vh;\n}\n.form__input{\n\twidth: 100%;\n\tbox-sizing: border-box;\n}\n.ishalf{\n\twidth: inherit;\n}\n.close{\n\tposition: absolute;\n\ttop: 1em;\n\tright:1em;\n}\n.close--btn{\n\tbackground: rgba(0, 0, 0, 0);\n\tborder: none;\n\tcolor: white;\n\tfont-size: 1em;\n}\n", ""]);
-
-/***/ }),
-/* 54 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(53);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(43)("c5de9798", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-becc1c1c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modal.vue", function() {
-     var newContent = require("!!../../../../node_modules/css-loader/index.js!../../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"id\":\"data-v-becc1c1c\",\"scoped\":false,\"hasInlineConfig\":true}!../../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./modal.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
 
 /***/ })
 /******/ ]);

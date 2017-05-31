@@ -1,28 +1,42 @@
 @extends('layouts.master')
 @section('content')
     
-    <modal v-if="showModal" @close="showModal = false">
-        <form method="POST" action="" class="form">
+    <modal v-if="showResigter" @close="showResigter = false">
+        <form method="POST" action="/register" class="form">
             {{ csrf_field() }}
             <div>
-                <input class="form__input ishalf" type="text" name="firstName" placeholder="First Name">
-                <input class="form__input ishalf" type="text" name="lastName" placeholder="Last Name">
+                <input class="form__input ishalf" type="text" name="firstName" placeholder="First Name" required>
+                <input class="form__input ishalf" type="text" name="lastName" placeholder="Last Name" required>
             </div>
             <div>
-                <input class="form__input" type="text" name="username" placeholder="User Name">
+                <input class="form__input" type="text" name="username" placeholder="User Name" required>
             </div>
             <div>
-                <input class="form__input" type="email" name="email" placeholder="E-mail Address">
+                <input class="form__input" type="email" name="email" placeholder="E-mail Address" required>
             </div>
 
             <div>
-                <input class="form__input" type="password" name="password" placeholder="Password">
+                <input class="form__input" type="password" name="password" placeholder="Password" required>
             </div>
             <div>
         　       <input class="form__input" type="password" name="password_confirmation" placeholder="Password Confirmation">
             </div>
             <div class="text--center">
                 <input class="btn card__btn" type="submit" name="submit" value="Sign Up">
+            </div>
+        </form>
+    </modal>
+    <modal v-if="showLogin" @close="showLogin = false">
+        <form method="POST" action="/login" class="form">
+            {{ csrf_field() }}
+            <div>
+                <input class="form__input" type="text" name="username" placeholder="User Name" required>
+            </div>
+            <div>
+                <input class="form__input" type="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="text--center">
+                <input class="btn card__btn" type="submit" name="submit" value="Log In">
             </div>
         </form>
     </modal>
@@ -33,8 +47,10 @@
             <h1 class="mainvisual__title">importShoes.dev</h1>
             <div class="flex flex--sparnd">
                 {{-- <sign-up title="Sign Up"></sign-up> --}}
-                <button class="btn btn--md btn--clear" @click="showModal = true">Sign Up</button>
-                <button class="btn btn--md btn--special"><a href="">Log In</a></button>
+                @if(!Auth::check())
+                    <button class="btn btn--md btn--clear" @click="showResigter = true">Sign Up</button>
+                    <button class="btn btn--md btn--special" @click="showLogin = true">Log In</button>
+                @endif
             </div>
         </div>
 
